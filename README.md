@@ -4,9 +4,9 @@ A deep learning project that recognizes handwritten digits using a Convolutional
 
 ## 📌 Project Overview
 
-This project uses a CNN to classify handwritten digits from 0 to 9.
+This project uses a Convolutional Neural Network (CNN) to classify handwritten digits from **0 to 9**.
 
-The model learns visual patterns from thousands of handwritten digit images and predicts the digit present in a new image.
+The model learns visual patterns from handwritten digit images and predicts the digit present in a new image.
 
 ## 🚀 Features
 
@@ -15,7 +15,9 @@ The model learns visual patterns from thousands of handwritten digit images and 
 - MNIST dataset
 - Image normalization and preprocessing
 - Model training and evaluation
-- Digit prediction on unseen images
+- Accuracy and loss visualization
+- Confusion matrix analysis
+- Digit prediction on unseen data
 
 ## 🧠 CNN Architecture
 
@@ -28,21 +30,68 @@ The model consists of:
 - Dropout for reducing overfitting
 - Softmax output layer for digit classification
 
-### Workflow
+## 🔄 How It Works
+
+1. **Load MNIST Dataset** – Load handwritten digit images for training and testing.
+2. **Preprocess Images** – Normalize pixel values and reshape images for CNN input.
+3. **Train CNN Model** – Extract important visual features using convolution and pooling layers.
+4. **Classify Digits** – Use fully connected layers and Softmax to classify digits from 0–9.
+5. **Evaluate Model** – Measure performance using accuracy, loss, and a confusion matrix.
+
+## 📊 Dataset
+
+The project uses the **MNIST handwritten digit dataset**.
+
+- **Training Images:** 60,000
+- **Testing Images:** 10,000
+- **Image Size:** 28 × 28 pixels
+- **Number of Classes:** 10 (digits 0–9)
+
+## 🛠️ Technologies Used
+
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Jupyter Notebook
+- Google Colab
+- Convolutional Neural Networks (CNN)
+
+## 📈 Model Performance
+
+The CNN model was trained for **5 epochs**.
+
+| Metric | Result |
+|---|---:|
+| Training Accuracy | 95.68% |
+| Validation Accuracy | 96.80% |
+| Training Loss | 0.1423 |
+| Validation Loss | 0.1117 |
+| Total Parameters | 121,930 |
+
+### Training vs Validation Accuracy
+
+![Training vs Validation Accuracy](results/Training%20vs%20Validation%20Accuracy.png)
+
+### Training vs Validation Loss
+
+![Training vs Validation Loss](results/Training%20vs%20Validation%20Loss.png)
+
+### Confusion Matrix
+
+![MNIST CNN Confusion Matrix](results/MNIST%20CNN%20Confusion%20Matrix.png)
+
+## 📂 Project Structure
 
 ```text
-MNIST Dataset
-      ↓
-Data Preprocessing
-      ↓
-Convolutional Layers
-      ↓
-Pooling Layers
-      ↓
-Flatten
-      ↓
-Dense Layers
-      ↓
-Softmax
-      ↓
-Predicted Digit (0–9)
+CodeAlpha_HandwrittenCharacterRecognition/
+│
+├── CodeAlpha_HandwrittenCharacterRecognition.ipynb
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+└── results/
+    ├── Training vs Validation Accuracy.png
+    ├── Training vs Validation Loss.png
+    └── MNIST CNN Confusion Matrix.png
