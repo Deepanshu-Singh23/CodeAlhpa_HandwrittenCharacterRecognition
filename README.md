@@ -69,17 +69,6 @@ The CNN model was trained for **5 epochs**.
 | Validation Loss | 0.1117 |
 | Total Parameters | 121,930 |
 
-### Training vs Validation Accuracy
-
-![Training vs Validation Accuracy](results/Training%20vs%20Validation%20Accuracy.png)
-
-### Training vs Validation Loss
-
-![Training vs Validation Loss](results/Training%20vs%20Validation%20Loss.png)
-
-### Confusion Matrix
-
-![MNIST CNN Confusion Matrix](results/MNIST%20CNN%20Confusion%20Matrix.png)
 
 ## 📂 Project Structure
 
